@@ -35,8 +35,11 @@ jobs:
       - name: Installation des dépendances Composer
         run: docker exec php_web composer install
 
-      - name: Exécution des tests
-        run:  docker exec php_web ./vendor/bin/phpunit tests
+      - name: Exécution des tests unitaires
+        run: docker exec php_web ./vendor/bin/phpunit tests
+
+      - name: Exécution du linter PHPStan
+        run: docker exec php_web ./vendor/bin/phpstan analyse -l 6 src tests
 
       - name: Stop containers
         if: always()

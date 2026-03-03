@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class PageTest extends TestCase
 {
-    public function testHomePageRenders()
+    public function testHomePageRenders(): void
     {
         ob_start();
         require __DIR__ . '/../src/index.php';

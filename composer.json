@@ -1,8 +1,8 @@
 {
   "name": "r606/eval",
-  "require": {},
   "require-dev": {
-    "phpunit/phpunit": "^12.5"
+    "phpunit/phpunit": "^12.5",
+    "phpstan/phpstan": "^2.1"
   },
   "autoload": {
     "psr-4": {
