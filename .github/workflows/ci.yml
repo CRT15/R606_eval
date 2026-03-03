@@ -36,7 +36,7 @@ jobs:
         run: docker exec php_web composer install
 
       - name: Exécution des tests
-        run: docker exec php_web ./vendor/bin/phpunit
+        run:  docker exec php_web ./vendor/bin/phpunit tests
 
       - name: Stop containers
         if: always()
