@@ -33,13 +33,10 @@ jobs:
           done
 
       - name: Installation des dépendances Composer
-        run: docker exec php_web composer install || true
-
-      - name: Installation PHPUnit si absent
-        run: docker exec php_web composer require --dev phpunit/phpunit || true
+        run: docker exec php_web composer install
 
       - name: Exécution des tests
-        run: docker exec php_web vendor/bin/phpunit
+        run: docker exec php_web ./vendor/bin/phpunit
 
       - name: Stop containers
         if: always()
