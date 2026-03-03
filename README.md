@@ -10,5 +10,5 @@ docker compose up -d
 ## Pour exécuter les tests unitaires
 
 ```bash
-vendor/bin/phpunit tests
+docker exec php_web ./vendor/bin/phpunit tests
 ```

@@ -4,16 +4,17 @@ use PHPUnit\Framework\TestCase;
 
 class PageTest extends TestCase
 {
-    public function testHomePageLoads()
+    public function testHomePageRenders()
     {
-        $html = file_get_contents('http://localhost:8080');
+        ob_start();
+        require __DIR__ . '/../src/index.php';
+        $html = ob_get_clean();
 
-        $this->assertNotFalse($html, "La page ne répond pas");
+        $this->assertNotEmpty($html);
 
         $this->assertStringContainsString(
             '<h1>R6.06 Maintenance applicative</h1>',
-            $html,
-            "Le titre principal n'est pas présent dans la page"
+            $html
         );
     }
 }
