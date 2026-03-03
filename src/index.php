@@ -5,16 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>R6.06 Maintenance applicative</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <header>
     <h1>R6.06 Maintenance applicative</h1>
-    <h2 style="color: crimson">Evaluation</h2>
-    <p style="color: crimson">Modifiez ce projet à l'aide des outils vus ensemble pour améliorer la maintenabilité de ce projet et déployez le sur le serveur mis à votre disposition</p>
-    <p style="color: crimson">Vous êtes libre de modifier ce que vous souhaitez sur le projet, chaque amélioration (ou début d'amélioration) sera prise en compte dans la notation</p>
-    <p style="color: crimson; font-weight: bold; border: solid 2px crimson; padding: 5px; width: fit-content;">
-        Pensez à inviter cdiiv sur votre projet Github
-    </p>
+    <h2 class="rouge">Evaluation</h2>
+    <p class="rouge">Modifiez ce projet à l'aide des outils vus ensemble pour améliorer la maintenabilité de ce projet et déployez le sur le serveur mis à votre disposition</p>
+    <p class="rouge">Vous êtes libre de modifier ce que vous souhaitez sur le projet, chaque amélioration (ou début d'amélioration) sera prise en compte dans la notation</p>
+    <p class="cadre">Pensez à inviter cdiiv sur votre projet Github</p>
 </header>
 
 <?php
@@ -39,17 +38,17 @@ try {
 ?>
 
 <table>
-    <thead style="font-weight: bold;">
+    <thead class="bold">
         <tr>
-            <td style="border: solid black 1px">Id</td>
-            <td style="border: solid black 1px">Text</td>
+            <td class="border">Id</td>
+            <td class="border">Text</td>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($rows as $row): ?>
             <tr>
-                <td style="border: solid black 1px"><?= htmlspecialchars($row['id']) ?></td>
-                <td style="border: solid black 1px"><?= htmlspecialchars($row['text']) ?></td>
+                <td class="border"><?= htmlspecialchars($row['id']) ?></td>
+                <td class="border"><?= htmlspecialchars($row['text']) ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
