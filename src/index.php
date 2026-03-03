@@ -32,9 +32,11 @@ try {
 <table>
     <thead style="font-weight: bold;"><tr><td style="border: solid black 1px">Id</td><td style="border: solid black 1px">Text</td></tr></thead>
     <tbody>
-        <?php $i=0; while (true) { if(!key_exists($i, $d)) break;?>
-            <tr><td style="border: solid black 1px"><?= $d[$i]['id'] ?></td><td style="border: solid black 1px"><?= $d[$i]['text'] ?></td></tr>
-        <?php $i++; } ?>
+        <?php foreach ($d as $row): ?>
+            <tr>
+                <td style="border: solid black 1px"><?= $row['id'] ?></td><td style="border: solid black 1px"><?= $row['text'] ?></td>
+            </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 </body>
